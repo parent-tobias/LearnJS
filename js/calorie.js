@@ -1,3 +1,4 @@
+
 function inputCaloriesByDay(day) {
     if (day === 'Monday') {
       return 3500;
@@ -17,7 +18,10 @@ function inputCaloriesByDay(day) {
       return 'Please choose valid day';
     }
 
-function getTotalCalories() {
+    }
+  
+
+  function getTotalCalories() {
     return inputCaloriesByDay('Monday') +
     inputCaloriesByDay('Tuesday') +
     inputCaloriesByDay('Wednesday') +
@@ -26,13 +30,15 @@ function getTotalCalories() {
     inputCaloriesByDay('Saturday') + 
     inputCaloriesByDay('Sunday');
   }
+  
 
-function getIdealCalories() {
+  function getIdealCalories() {
     var idealDailyCalories = 2000;
     return idealDailyCalories * 7;
   }
+  
 
-function calculateHealthPlan() {
+  function calculateHealthPlan() {
     var actualCalories = getTotalCalories();
     var idealCalories = getIdealCalories();
     if (actualCalories === idealCalories) {
@@ -44,5 +50,6 @@ function calculateHealthPlan() {
       return 'Time for seconds!';
     }
   }
-
+  
   console.log(calculateHealthPlan());
+  
