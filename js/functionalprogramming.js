@@ -91,3 +91,69 @@ var greeting = shout.map(function(salutation) {
 })
 
 var hiShout = shout.shift();
+
+// whiteboard
+
+var numbers = [1,2,3,4];
+numbers.reduce(function(acc, curr, idx, arr) {
+    return acc + curr;
+}, 5);
+
+var multArr = [[0,1], [2,3], [4,5]];
+multArr.reduce(function(acc,curr,idx,arr){
+    return acc.concat(curr);
+}, [-2,-1]);
+
+// review reduce
+// higher order function
+// two arguments
+// high customization
+
+var homeruns = [
+    {batter: 12},
+    {batter: 21},
+    {batter: 28},
+    {batter: 42},
+    {batter: 31},
+    {batter: 22},
+    {batter: 17},
+    {batter: 16},
+    {batter: 5},
+];
+
+var totalHomers = homeruns.reduce(function(a, b) {
+    console.log('accumulative ', a, 'current ', b);
+    return a + b.batter;
+})
+
+
+var numbers = [1, 2, 3, 4, 5];
+
+numbers.reduce(function(x, y) {
+    console.log(x, y);
+});
+
+// find largest number is array
+
+numbers.reduce(function(acc, curr) {
+    if (acc > curr) {
+        return acc;
+    } else {
+        return curr;
+    }    
+});
+
+// practice
+// use map method on all elements of an array
+// use reduce method to return single value of new array
+// Challenge!
+// chain method
+
+var numbers = [1, 2, 3, 4];
+
+var triples = numbers.map(function(number) {
+    return number * 3;
+}). reduce(function(a, b) {
+    return a + b;
+}, 0);
+
