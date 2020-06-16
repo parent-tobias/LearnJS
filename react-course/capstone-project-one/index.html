@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- REACT LIBRARY -->
+  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+  <!-- REACT DOM LIBRARY -->
+  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>FriendLy</title>
+</head>
+<body>
+
+    <div id="app">React has not rendered yet</div>
+
+    <script type="text/babel">
+
+    // FriendLy Complex Component
+    function FriendLy() {
+        return(
+            <div>
+                <Avatar/>
+                <UserName/>
+                <GetConnected/>
+            </div>
+        )
+    }
+
+    // Avatar Component
+
+    function Avatar() {
+        return(
+            <img src="https://pbs.twimg.com/profile_images/1255263318387970048/hcPmtxCw_400x400.jpg" alt="profile pic"/>
+        )
+    }
+
+    // UserName Component
+
+    function UserName() {
+        return(
+            <h1>Profile Name</h1>
+        );
+    }
+    
+    // GetConnected Complex Component
+    function GetConnected() {
+        return(
+            <div>
+                <Like/>
+                <Share/>
+                <Add/>
+            </div>
+        );
+    }
+
+    // Like Component
+
+    // Like Component
+    function Like() {
+        return(
+          <i className="fa fa-thumbs-o-up"></i>
+        );
+      }
+
+      // Share Component
+      function Share() {
+        return(
+          <i className="fa fa-share"></i>
+        );
+      }
+
+      // Add Component
+      function Add() {
+        return(
+          <i className="fa fa-users"></i>
+        );
+      }
+
+    ReactDOM.render(
+        <FriendLy/>,
+        document.getElementById("app")
+    );
+
+
+    </script>
+    
+</body>
+</html>
