@@ -21,19 +21,29 @@
   <!-- JAVASCRIPT -->
   <script type="text/babel">
 
-  var Person = function(props) {
-      return(
-        <h1>Hi, {props.name}</h1>
-      );
-  }
+    // Create Note Component
+
+    class Note extends React.Component {
+      handleButtonEdit() {
+        alert("this function will edit a note");
+      }
+      handleButtonDelete() {
+        alert("this function will delete a note")
+      }
+      render() {
+        console.log(this);
+        return(
+          <div>
+            <h1>Useless Note Taker</h1>
+            <button onClick={this.handleButtonEdit}>edit note</button>
+            <button onClick={this.handleButtonDelete}>delete note</button>
+          </div>
+        );
+      }
+    }
 
     ReactDOM.render(
-        <div>
-            <Person name="Chris"/>
-            <Person name="Sarah"/>
-            <Person name="Jill"/>   
-            <Person name="Bill"/>     
-        </div>,
+      <Note/>,
       document.getElementById("app")
     );
 
